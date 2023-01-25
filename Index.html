@@ -2,24 +2,46 @@
 <html>
     <head>
         <title>Justin Ahiagbede's Personal website</title>
+        <link href="styles.css"rel="stylesheet"/>
 
     </head>
 
     <body>
         <!--All content goes here-->
-        <div> 
+        <div id="all-contents"> 
             <nav>
-                <h2>Justin Ahiagbede</h2>
-                <p>Student/Athlete</p>
-                <!--Intrests section-->
-                <div>
-                    <h3>Intrest</h3>
-                       <ul>
+            <h1> Justin's Personal Website</h1>
+            <ul id="nav-ul">
+                <li class="nav-li">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-li"><a href="portfolio.html">Portfolio</a>
+                </li>
+            </ul>
+            </nav>
+            <main>
+                <!--SideBar section-->
+                <div class="sidebar">
+                    <img class="sidebar-img" src="data:image/jpeg;base64,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"/>
+                    
+                </div>
+
+                <!--Content section-->
+                <div class="content">
+                    <h2>Justin Ahiagbede</h2>
+                    <p>Student/Athlete</p>
+                    <p> YOTUBE: <strong>JustinCodes</strong></p>
+                    <!--Intrests section-->
+                    <div id="intrests">
+                      <h3>Intrests</h3>
+                      <ul>
                         <li>Basketball</li>
                         <li>Coding</li>
                         <li>Anime</li>
-                    </ul>
+                     </ul>
+                    </div>
                 </div>
+                </main>
             </nav>
     
             <main>
