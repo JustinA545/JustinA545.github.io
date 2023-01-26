@@ -26,6 +26,7 @@ nav {
     padding-right: 10%;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;add margin-bottom: 20px;
 }
 h1 {
     display: flex;
