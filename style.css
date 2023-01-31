@@ -1,5 +1,5 @@
 body {
-    background: rgba(4, 4, 11, 0.46);
+    background: rgba(3, 3, 220, 0.46);
     color: rgb(252, 249, 249);
     padding: 4px;
     font-family: Charcol;
@@ -18,7 +18,7 @@ body {
 /* navigation menu */
 
     nav {
-        background: rgb(7, 225, 254);
+        background: rgb(30, 183, 126);
        margin: 0 auto;
         display: flex;
         padding: 0px;
@@ -81,6 +81,9 @@ main {
 .content {
     flex: 1;
     padding: 15px;
+}
+img{
+    padding
 }
 
    /* portfolio styles */
