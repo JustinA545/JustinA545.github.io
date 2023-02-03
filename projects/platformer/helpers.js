@@ -115,7 +115,7 @@ function debug() {
   ctx.fillText("xs" + player.speedX + " x: " + player.x, 500, 200);
   ctx.fillText("ys" + player.speedY + " y: " + player.y, 500, 250);
 
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "";
   ctx.fillText("on ground " + player.onGround, 150 + player.x, player.y - 20);
   ctx.fillText("hitx" + hitDx, 150 + player.x, player.y);
   ctx.fillText("hity" + hitDy, 150 + player.x, player.y + 20);
