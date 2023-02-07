@@ -61,7 +61,7 @@ $(function () {
       createCollectable("max", 755, 455, 0, 1.5);
       createCollectable("steve", 970, 330, 0, 1.5);
       createCollectable("kennedi", 1200, 450, 0, 1.5);
-      createCollectable("grace", 1295, 300, 0, 1.5);
+      createCollectable("grace", 1295, 350, 0, 1.5);
 
       createCollectable("grace", 1400, 650, 0, 1.5);
       createCollectable("steve", 1440, 650, 0, 1.5);
@@ -76,7 +76,7 @@ $(function () {
 
     createCannon("right", 600, 1000);
     createCannon("top", 600, 1000);
-
+    createCannon("left", 300, 1000);
 
     
 
