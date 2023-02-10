@@ -3,26 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<title>Bouncing Box</title>
-	<script src="jquery.min.js"></script>
+	<script src="jquery.min.js">
+
+	</script>
 	<style>
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(13, 243, 235);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 200px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
+			background-color: rgb(25, 0, 255);
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-
+            
 </head>
 <body class="board">
 	<!-- HTML for the box -->
@@ -63,16 +66,25 @@
 			
 			// TODO 2 - Variable declarations 
 			
-
+			var positionX = 0;
+			var points = 0;
+			var speed = 10;
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
+			/*We are increasin the value of postitionX by 10*/
 			function update() {
-				
+				moveBoxTo(positionX)
 
+				positionX = positionX + speed;
+				
+				if (conditionIsTrue) {
+					// IF positionX is greater than boardWidth: Change Direction of the Box
+				}
+				
 			};
 
 			/* 
@@ -81,9 +93,14 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0;
+
+				points = points + 1;
+		
+				changeBoxText(points);
+
+				speed = speed + 5
 				
-
-
 			};
 		})();
 	</script>
