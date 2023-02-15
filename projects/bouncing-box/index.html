@@ -10,7 +10,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: rgb(13, 243, 235);
+			background-color: rgb(5, 13, 248);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -21,7 +21,12 @@
 		}
 		.board{
 			height: 100vh;
-			background-color: rgb(25, 0, 255);
+			background-color: rgb(37, 167, 143);
+		}
+		h1{
+			text-align: center;
+			color: white;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -30,17 +35,18 @@
 <body class="board">
 	<!-- HTML for the box -->
 	<div class="box">?</div>
-
+<h1>Justin's Bouncing Box</h1>
 	<script>
-		(function(){
+		
 			'use strict'
+     
 			/* global jQuery */
 
 			//////////////////////////////////////////////////////////////////
 			/////////////////// SETUP DO NOT DELETE //////////////////////////
 			//////////////////////////////////////////////////////////////////
 			
-			var box = jQuery('.box');	// reference to the HTML .box element
+            var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
@@ -65,28 +71,28 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
 			var positionX = 0;
-			var points = 0;
-			var speed = 10;
+            var speed = 10;
+            var points = 0;
+	        
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
-			/*We are increasin the value of postitionX by 10*/
-			function update() {
-				moveBoxTo(positionX)
-
-				positionX = positionX + speed;
-				
-				if (conditionIsTrue) {
-					// IF positionX is greater than boardWidth: Change Direction of the Box
-				}
-				
-			};
-
+			/*We are increasing the value of postitionX by 10*/
+			  function update() {
+				/*We want to increase the value  of positionX by 10*/
+			positionX += speed;
+		    moveBoxTo(positionX)
+			if (positionX > boardWidth) {
+			speed = -speed;
+              }
+			  if( positionX < 0) {
+				speed = speed * -1;
+			  }
+			  }
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
@@ -94,15 +100,13 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
-
+		        changeBoxText(points);
 				points = points + 1;
-		
-				changeBoxText(points);
-
-				speed = speed + 5
-				
+		        speed = speed + 3;	
 			};
-		})();
+
+        
 	</script>
 </body>
 </html>
+        
