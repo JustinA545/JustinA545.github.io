@@ -85,14 +85,15 @@ var init = function (window) {
          if(circle.x < 0){
             circle.x = canvas.width;
          }
-            // YOUR TODO 6 CODE ENDS HERE //////////////////////////
-        }
-        if (circle.y > canvas.height){
+         if (circle.y > canvas.height){
             circle.y = 0;
         }
         if(circle.y < 0){
-         circle.y = canvas.height;
+            circle.y = canvas.height;
+           }
+            // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
+      
         /////////////////////////////////////////////////////////////
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
         /////////////////////////////////////////////////////////////
